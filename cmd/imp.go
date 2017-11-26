@@ -8,6 +8,9 @@ import (
 )
 
 func main() {
+	// スタックの起動
+	go model.Hoge(model.Stack)
+
 	// Echoのインスタンス作る
 	e := echo.New()
 
@@ -16,7 +19,7 @@ func main() {
 	e.Use(middleware.Recover())
 
 	// ルーティング
-	e.GET("/", model.Imp())
+	e.GET("/imp", model.ImpHD())
 
 	// サーバー起動
 	e.Start(":" + os.Getenv("PORT3")) //ポート番号指定してね
