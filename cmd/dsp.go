@@ -16,7 +16,8 @@ func main() {
 	e.Use(middleware.Recover())
 
 	// ルーティング
-	e.GET("/", model.Dsp())
+	e.GET("/dsp", model.Dsp())
+	e.GET("/", model.OkDspHD())
 
 	// サーバー起動
 	e.Start(":" + os.Getenv("PORT2")) //ポート番号指定してね
