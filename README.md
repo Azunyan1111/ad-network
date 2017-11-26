@@ -1,12 +1,17 @@
 # ad-network
 
+### setup
+```$xslt
+make setup
+```
+
 ### start
 Stop is "Control + C"
 ```hoge.sh
 make run
 ```
 
-### All file gofmt
+### all file gofmt
 ```.sh
 make fmt
 ```

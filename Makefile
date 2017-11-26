@@ -9,3 +9,6 @@ fmt:
 	
 stop:
 	pkill -f 'cmd/'
+
+setup:
+	go get ./...
