@@ -20,6 +20,7 @@ func main() {
 
 	// ルーティング
 	e.GET("/imp", model.ImpHD())
+	e.GET("/", model.OkHD())
 
 	// サーバー起動
 	e.Start(":" + os.Getenv("PORT3")) //ポート番号指定してね

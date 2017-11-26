@@ -1,8 +1,11 @@
 package log
 
-import "log"
+import (
+	"fmt"
+	"time"
+)
 
 func Println(v ...interface{}) {
-	log.Print("Log:")
-	log.Println(v)
+	fmt.Print(time.Now())
+	fmt.Println(v)
 }
