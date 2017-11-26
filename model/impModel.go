@@ -3,6 +3,7 @@ package model
 import (
 	"github.com/labstack/echo"
 	"net/http"
+	"github.com/Azunyan1111/ad-network/log"
 )
 
 var Stack = make(chan imp)
@@ -21,6 +22,6 @@ func ImpHD() echo.HandlerFunc {
 // スタック（チャンネルの中に構造体が入ると処理が始まる）
 func Hoge(stack chan imp){
 	for out := range stack{
-		// 記録処理
+		log.Println(out)
 	}
 }
