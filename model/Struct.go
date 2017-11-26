@@ -1,12 +1,19 @@
 package model
 
-
 type imp struct {
 	impId string
 	dspId string
 	price string
 }
 
-type impResponse struct {
+type okResponse struct {
 	Status string
+}
+
+type dspResponse struct {
+	AdId     string
+	DspId    int
+	ImpId    string
+	Price    int
+	Creative string
 }
