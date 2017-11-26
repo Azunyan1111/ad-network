@@ -12,9 +12,9 @@ func ImpHD() echo.HandlerFunc {
 	return func(c echo.Context) error { //c をいじって Request, Responseを色々する
 		fast(c)
 		var impRequest imp
-		impRequest.impId = c.QueryParam("ImpId")
-		impRequest.dspId = c.QueryParam("DspId")
-		impRequest.price = c.QueryParam("Price")
+		impRequest.impId = c.QueryParam("impid")
+		impRequest.dspId = c.QueryParam("dspid")
+		impRequest.price = c.QueryParam("price")
 		if impRequest.impId == "" || impRequest.dspId == "" || impRequest.price == "" {
 			return c.JSON(http.StatusBadRequest, okResponse{Status: "NG"})
 		}
